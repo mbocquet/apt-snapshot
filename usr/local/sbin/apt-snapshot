@@ -1,1 +1,17 @@
-/usr/local/sbin/apt-snapshot
+#!/usr/bin/env bash
+
+. /etc/default/apt-snapshot
+
+# Remove previous snapshots keeping SNAP_HISTORY_KEEP
+# Get old snapshots list
+SNAPS="$(lvs --noheadings -o lv_path -S origin=${ORIGIN_LV})"
+SNAPS_COUNT="$(echo $SNAPS|wc -w)"
+# Delete 1+ SNAPSHOT_COUNT - SNAP_HISTORY_KEEP
+SNAPS_TO_DELETE=$((1 + $SNAPS_COUNT - $SNAP_HISTORY_KEEP))
+if [ "$SNAPS_TO_DELETE" -gt "0" ]
+then
+    lvremove $(echo $SNAPS|cut -d' ' -f-${SNAPS_TO_DELETE}) -f
+fi
+
+# Create a new snapshot
+lvcreate --snapshot -l ${PERCENT_SIZE}ORIGIN -i ${SNAP_DEVICES_COUNT:=1} /dev/${ORIGIN_VG}/${ORIGIN_LV} -n ${ORIGIN_LV}_$(date +%Y%m%d-%H%M%S) $SNAP_DEVICES
