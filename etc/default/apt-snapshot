@@ -1,0 +1,5 @@
+PERCENT_SIZE="50%"
+ORIGIN_VG="grue"
+ORIGIN_LV="root"
+SNAP_DEVICES_COUNT="2"
+SNAP_DEVICES="/dev/sda3 /dev/sdb3"

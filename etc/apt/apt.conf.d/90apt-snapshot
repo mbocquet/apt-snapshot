@@ -1,0 +1,4 @@
+//DPkg::Pre-Invoke {
+APT::Update::Pre-Invoke {
+        "/usr/local/sbin/apt-snapshot";
+};
