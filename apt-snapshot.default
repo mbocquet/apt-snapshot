@@ -3,3 +3,4 @@ ORIGIN_VG="grue"
 ORIGIN_LV="root"
 SNAP_DEVICES_COUNT="2"
 SNAP_DEVICES="/dev/sda3 /dev/sdb3"
+SNAP_HISTORY_KEEP=5
