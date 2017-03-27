@@ -3,7 +3,8 @@
 # 'apt-snapshot'. Creates a snapshot of root filesystem before APT operation.
 # Copyright © 2016-2017 Mathias Bocquet (mbocquet@sekoya.org)
 
-. /etc/default/apt-snapshot
+DEFAULT="/etc/default/$(basename $0)"
+. $DEFAULT
 
 # Remove previous snapshots keeping SNAP_HISTORY_KEEP
 # Get old snapshots list
