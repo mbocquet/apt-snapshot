@@ -1,6 +1,8 @@
-PERCENT_SIZE="50%"
-ORIGIN_VG="grue"
+# Variables for apt-snapshot
+
+ORIGIN_VG="VG"
 ORIGIN_LV="root"
-SNAP_DEVICES_COUNT="2"
-SNAP_DEVICES="/dev/sda3 /dev/sdb3"
+PERCENT_SIZE="50%"
+#SNAP_DEVICES_COUNT=2
+#SNAP_DEVICES="/dev/sda3 /dev/sdb3"
 SNAP_HISTORY_KEEP=5
