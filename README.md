@@ -4,15 +4,16 @@ Manage snapshots of root filesystem before APT operations.
 
 ## Installation
 
-- Copy `apt-snapshot` to `/usr/local/sbin`.
+- Copy `apt-snapshot` to `/usr/local/sbin`.  
   `cp apt-snapshot /usr/local/sbin`
-- Make the script executable
+- Make the script executable  
   `chmod +x /usr/local/sbin/apt-snapshot`
-- Copy `apt-snapshot.default` to `/etc/default/apt-snapshot`
+- Copy `apt-snapshot.default` to `/etc/default/apt-snapshot`  
   `cp apt-snapshot.default /etc/default/apt-snapshot`
-- Copy APT conf file to APT conf.d folder /etc/apt/apt.conf.d/
+- Copy APT conf file to APT conf.d folder `/etc/apt/apt.conf.d/`  
   `cp apt-snapshot.conf /etc/apt/apt.conf.d/90apt-snapshot`
-- Customize `/etc/default/apt-snapshot`
+- Customize `/etc/default/apt-snapshot`  
+  See examples below
 
 ## Usage
 
