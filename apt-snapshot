@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# 'apt-snapshot'. Creates a snapshot of root filesystem before APT operation.
+# 'apt-snapshot'. Manage snapshots of root filesystem before APT operations.
 # Copyright © 2016-2017 Mathias Bocquet (mbocquet@sekoya.org)
 
 DEFAULT="/etc/default/$(basename $0)"

@@ -1,6 +1,6 @@
 # apt-snapshot
 
-Creates a snapshot of root filesystem before APT operation.
+Manage snapshots of root filesystem before APT operations.
 
 ## Installation
 
