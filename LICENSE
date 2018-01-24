@@ -1,5 +1,5 @@
 'apt-snapshot'. Creates a snapshot of root filesystem before APT operation.
-Copyright © 2016-2017 Mathias Bocquet (mbocquet@sekoya.org)
+Copyright © 2016-2018 Mathias Bocquet (mbocquet@sekoya.org)
 
 This file is part of 'apt-snapshot'.
 
