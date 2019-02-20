@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
 #
-# 'apt-snapshot'. Manage snapshots of root filesystem before APT operations.
-# Copyright © 2016-2017 Mathias Bocquet (mbocquet@sekoya.org)
+# 'apt-snapshot'. Creates a snapshot of root filesystem before APT operation.
+# Copyright © 2016-2019 Mathias Bocquet (mbocquet@sekoya.org)
 
 DEFAULT="/etc/default/$(basename $0)"
-. $DEFAULT
+[ -s $DEFAULT ] && . $DEFAULT
 
 # Remove previous snapshots keeping SNAP_HISTORY_KEEP
 # Get old snapshots list
-SNAPS="$(lvs --noheadings -o lv_path -S origin=${ORIGIN_LV})"
+# The grep part should be optimized !
+SNAPS="$(lvs --noheadings -o lv_path -S origin=${ORIGIN_LV}|grep ${ORIGIN_LV}_........-......$)"
 SNAP_COUNT="$(echo $SNAPS|wc -w)"
 # Delete 1+ SNAP_COUNT - SNAP_HISTORY_KEEP
 SNAPS_TO_DELETE=$((1 + $SNAP_COUNT - $SNAP_HISTORY_KEEP))
