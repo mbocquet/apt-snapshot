@@ -1,5 +1,6 @@
-'apt-snapshot'. Creates a snapshot of root filesystem before APT operation.
-Copyright © 2016-2018 Mathias Bocquet (mbocquet@sekoya.org)
+'apt-snapshot'. Manages constantly rolling snapshots of root filesystem allowing
+rollback to a previous state.
+Copyright © 2016-2019 Mathias Bocquet (mbocquet@sekoya.org)
 
 This file is part of 'apt-snapshot'.
 
